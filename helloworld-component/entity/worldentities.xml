@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <entities xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/entity-definition-2.1">
-    <entity entity-name="Example" package="org.helloworld">
+    <entity entity-name="Example" package="org.helloworld" short-alias="example" >
         <field name="id" type="id" is-pk="true"/>
         <field name="name" type="text-medium"/>
         <field name="date" type="date-time"/>
         <field name="price" type="currency-amount"/>
-        <field name="quantity" type="text-medium"/>
+        <field name="quantity" type="number-integer"/>
     </entity>
 </entities>

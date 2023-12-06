@@ -1,0 +1,47 @@
+
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/rest-api-2.1.xsd"
+          name="example" displayName="Example REST API" version="2.0.0">
+
+    <resource name="Examples" require-authentication="anonymous-all">
+        <method type="get" require-authentication="anonymous-all">
+            <entity name="Example" operation="list"/>
+        </method>
+        <method type="post" require-authentication="anonymous-all">
+            <service name="moqui.example.ExampleServices.create#Example"/>
+        </method>
+        <id name="id">
+            <method type="get">
+                <entity name="Example" operation="one"/>
+            </method>
+            <method type="patch" require-authentication="anonymous-all">
+                <service name="moqui.example.ExampleServices.update#Example"/>
+            </method>
+        </id>
+
+        
+    </resource>
+
+</resource>
+<!--        <id name="id">-->
+<!--            <method type="get">-->
+<!--                <entity name="examples" masterName="default" operation="list"/>-->
+<!--            </method>-->
+<!--            <method type="patch">-->
+<!--                <service name="moqui.example.ExampleServices.update#Example"/>-->
+<!--            </method>-->
+<!--            -->
+<!--            <resource name="items">-->
+<!--                <method type="get">-->
+<!--                    <entity name="example" operation="list"/>-->
+<!--                </method>-->
+<!--                <id name="exampleId">-->
+<!--                    <method type="post">-->
+<!--                        <entity name="exampleItems" operation="create"/>-->
+<!--                    </method>-->
+<!--                    <method type="patch">-->
+<!--                        <entity name="exampleItems" operation="update"/>-->
+<!--                    </method>-->
+<!--                </id>-->
+<!--            </resource>-->
+<!--        </id>-->
+

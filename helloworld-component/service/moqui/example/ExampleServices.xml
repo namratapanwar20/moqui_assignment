@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<services xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/service-definition-2.1.xsd">
+    <service verb="create" noun="Example" displayName="Create an Example" type="entity-auto" authenticate="anonymous-all" allow-remote="true">
+        <in-parameters>
+            <parameter name="id" required="true">
+            </parameter>
+            <parameter name="name" required="true">
+
+            </parameter>
+            <parameter name="date" required="true">
+
+            </parameter>
+            <parameter name="price" required="true">
+                <number-decimal/>
+            </parameter>
+            <parameter name="quantity" required="true">
+                <number-decimal/>
+            </parameter>
+            <parameter name="lastUpdatedStamp" required="true">
+
+            </parameter>
+        </in-parameters>
+    </service>
+    <service verb="update" noun="Example" displayName="Update an Example" type="entity-auto" authenticate="anonymous-all" allow-remote="true">
+        <in-parameters>
+            <parameter name="id" required="true">
+
+            </parameter>
+            <parameter name="name">
+
+            </parameter>
+            <parameter name="date" >
+
+            </parameter>
+            <parameter name="price" >
+                <number-decimal/>
+            </parameter>
+            <parameter name="quantity">
+                <number-decimal/>
+            </parameter>
+            <parameter name="lastUpdatedStamp">
+
+            </parameter>
+        </in-parameters>
+        <out-parameters>
+            <parameter name="name" >
+
+            </parameter>
+            <parameter name="name" >
+
+            </parameter>
+            <parameter name="date" >
+
+            </parameter>
+            <parameter name="price">
+                <number-decimal/>
+            </parameter>
+            <parameter name="quantity">
+                <number-decimal/>
+            </parameter>
+            <parameter name="lastUpdatedStamp">
+
+            </parameter>
+        </out-parameters>
+    </service>
+<!--    <service verb="update" noun="Example" displayName="Update an Example" type="entity-auto" allow-remote="true">-->
+<!--        <in-parameters>-->
+<!--            <auto-parameters include="nonpk">-->
+
+<!--            </auto-parameters>-->
+<!--            <parameter name="id" required="true" type="String">-->
+
+<!--            </parameter>-->
+<!--            <parameter name="name" required="true" type="String">-->
+
+<!--            </parameter>-->
+<!--            <parameter name="date" required="true">-->
+
+<!--            </parameter>-->
+<!--            <parameter name="price" required="true">-->
+<!--                <number-decimal/>-->
+<!--            </parameter>-->
+<!--            <parameter name="quantity" required="true">-->
+<!--                <number-decimal/>-->
+<!--            </parameter>-->
+<!--        </in-parameters>-->
+<!--        <out-parameters>-->
+<!--            <auto-parameters include="pk" required="true"/>-->
+<!--        </out-parameters>-->
+<!--    </service>-->
+</services>
